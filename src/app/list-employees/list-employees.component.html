@@ -1,0 +1,120 @@
+
+
+<div class="container">
+  
+  <div class="list">
+    <h2>List of Employees</h2>
+    <ul class="employs">
+      <div class="text-alert" *ngIf="alert != ''"><p>{{ alert }}</p></div>
+      <li *ngFor="let employee of employs, let i=index" class="listing">
+        
+        <span id="profile"><img src="{{employee.url}}" alt="user"></span>
+        <div class="titling">
+            <h3>{{employee.name}}</h3>
+            <span class="badge">{{employee.email}} </span><br> 
+            <span class="badge">{{employee.gender}} </span>
+            <span class="badge">{{employee.bio}} </span>
+            <span class="badge">{{employee.password}} </span>
+            {{employee.count}}
+        </div>
+        
+        <button (click)="removeEmployee(i)" class="btn danger">Remove</button>
+        <button (click)="editEmployee(i)" class="btn info">Edit</button>
+      </li>
+    </ul>
+    
+    <div class="extent"><button (click)="toggle()" class="btn-add" id="button-add">+</button></div>
+  </div>
+  <div class="detail"> 
+      <div class="editEmployee">
+          <h3>Update</h3>
+          <small  *ngIf="error!=''" style="padding: 10px; background-color:crimson"><span>{{error}}</span></small>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" [(ngModel)]="model2.name">
+            </div>
+            
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" [(ngModel)]="model2.email" required>
+            </div>
+            
+            
+            <div class="form-group">
+            <label>Gender</label>
+            <select name="gender" [(ngModel)]="model2.gender" required>
+              <option selected>Choose your gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Bio</label>
+            <textarea name="bio"  [(ngModel)]="model2.bio" style="height: 390px"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+            <input type="password" name="password" [(ngModel)]="model2.password">
+            </div>
+            <div class="form-group">
+              <label>Paste Url of Image</label>
+              <input type="url" name="url" [(ngModel)]="model2.url">
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <button type="submit" class="btn-submit" (click)=" updateEmployee(k)"  style="background-color: rgb(148, 148, 250); box-shadow: none"><i class="fas fa-edit"></i> Save Changes</button>
+               
+            </div>
+       </div>
+  </div>
+  <div class="" id="pop" [class]="hide">
+    <h3>Register</h3>
+      <small  *ngIf="error!=''" style="padding: 10px; background-color:crimson"><span>{{error}}</span></small>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" [(ngModel)]="model.name">
+        </div>
+        
+        <div class="form-group"> 
+            <label>Email</label>
+            <input type="email" name="email" [(ngModel)]="model.email" required>
+        </div>
+        
+        
+        <div class="form-group">
+        <label>Gender</label>
+        <select name="gender" [(ngModel)]="model.gender" required>
+          <option selected>Choose your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Bio</label>
+        <textarea name="bio"  [(ngModel)]="model.bio"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Password</label>
+        <input type="password" name="password" [(ngModel)]="model.password">
+        </div>
+        <div class="form-group">
+          <label>Paste Url of Image</label>
+          <input type="url" name="url" [(ngModel)]="model.url">
+        </div>
+        <div class="form-group" style="margin-top: 10px">
+            <button type="submit" class="btn-submit" (click)="addEmployee()"  style="background-color: #333;"><i class="fas fa-user"></i> Add Employee</button>
+           
+        </div>
+       
+ 
+  </div>
+ 
+</div>
+
+
+
+
+

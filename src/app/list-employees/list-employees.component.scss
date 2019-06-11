@@ -1,0 +1,133 @@
+
+.btn-add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff5852;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 95%;
+    position: static;
+
+}
+.btn-add:hover {
+    background: red;
+    border: 1px solid #eb423c;
+    color: #fff;
+}
+.container {
+    margin: 0 auto;
+    position: relative;
+    max-width: 100%;
+    padding: 40px;
+}
+.list {
+    float: left;
+    margin-right: 30px;
+    box-shadow: #dddddd;
+    width: 60%;
+    padding: 20px;
+    border-radius: 7px;
+    background: #fff;
+    position: relative;
+}
+.popUp {
+    position: absolute;
+    background: #ecc7c6;
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 40px;
+    box-shadow: 0 18px 18px 0 #333;
+    width: 250px;
+    display: none;
+   
+
+}
+@media only screen and(max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+    .list {
+        width: 100%;
+        margin-left: -20px;
+        margin-bottom: 20px;
+
+    }
+  
+    .btn-add {
+        margin-left: 85%;
+    }
+}
+.detail{
+  border: 1px solid #dddd;
+  width: 30%;
+  float: left;
+  padding: 30px;
+  position: relative;
+  box-shadow: #dddddd;
+  border-radius: 7px;
+  background: rgba(179, 190, 184, 0.5);
+  
+}
+.employs {
+    list-style: none;
+   
+}
+.employs li {
+    display: block;
+    padding: 10px;
+    color: #333;
+    margin-top: 10px;
+    box-shadow: 0 0 3px #dddddd;
+    transition: all 500ms;
+}
+#profile img{
+    float: left;
+    max-height: 50px;
+    margin-top: -5px;
+    margin-right: 10px;
+
+}
+
+.employs li:hover {
+    margin-left: 15px;
+    background: #3e4c97;
+    color: #dddddd;
+    border-radius: 5px;
+}
+
+.fine {
+    position: absolute;
+    background: #ff5852;
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 40px;
+    box-shadow: 0 18px 18px 0 #333;
+    width: 250px;
+    display: none;
+    display: block;
+}
+.less {
+    display: none;
+}
+
+// buttons
+
+.btn {
+    float: right;
+    border: none;
+    padding: 5px;
+    margin-right: 4px;
+    margin-top: -20px;
+    
+    width: 70px;
+    color: #fff;
+    
+}
+.danger {
+    background-color: #eb423c;
+}

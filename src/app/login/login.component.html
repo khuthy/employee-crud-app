@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;top: 25vh;color: #f8f8f8;position: relative;text-shadow: 2px 2px #333;">Employee App</h1>
+  <form class="forms" (submit)="loginUser($event)">
+    <h3>Log In</h3>
+    <div *ngIf="error != ''"><p style="background: crimson; color: #fff; padding: 1px;">{{error}}</p></div>
+    <small><a href="#" class="fpassword">Forgot Password</a></small>
+      <div class="form-group">
+        <div class="feedback"><i class="fas fa-user"></i></div>
+        <input type="text" placeholder="Username" id="username" required>
+      </div>
+      <div class="form-group">
+          <div class="feedback"><i class="fas fa-lock"></i></div>
+        <input type="password" placeholder="Password" id="password" required>
+      </div>
+      <div class="form-group"><br>
+        <button type="submit" class="btn-submit">
+            <i class="fas fa-sign-in-alt" style="font-size:15px"></i> Log In
+        </button>
+      </div>
+      <br><small><a routerLink="/register" class="fpassword">do not have an account? <strong>Sign Up</strong></a></small>
+  </form>
+</div>

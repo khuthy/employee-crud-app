@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+*{margin: 0; padding: 0;font-family: Arial, Helvetica, sans-serif;}
+body{
+    background: #f5f0f0;
+    height: 100%;
+}
+.wrapper{
+    background: url('src/assets/backer.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+.forms {
+    margin: auto;
+    max-width: 300px;
+    padding: 30px;
+    background: rgba(0,0,0,0.77);
+    position: relative;
+    top: 30vh;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: inset 0 0 5px #000;
+    opacity: 0;
+    animation: fadeIn 900ms forwards;
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1}
+}
+.forms h3 {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f8f8f8;
+    float: left;
+    margin-right: 35%;
+    text-shadow: 2px 2px rgb(80, 12, 12);
+}
+.forms .form-group {
+    margin-top: 15px;
+}
+label {
+    margin-right: 30px;
+    color: #f8f8f8;
+}
+input[type='checkbox']{
+    margin-right: 10px;
+}
+input[type="text"], input[type="email"], input[type="password"], select, input[type="url"] {
+    width: 98%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 7px;
+    font-size: 17px;
+    color: rgb(146, 58, 58); 
+    
+}
+textarea {
+    width: 98%;
+    height: 100px;
+    padding:3px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 7px;
+    font-size: 17px;
+    color: rgb(146, 58, 58); 
+}
+.feedback {
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 10px;
+    color: rgb(146, 58, 58);
+}
+.btn-submit {
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    background-color: #ff5852;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 3px red;
+}
+.btn-submit:active {
+    background-color: red;
+}
+
+a.fpassword {
+    text-decoration: none;
+    color: rgb(146, 58, 58);
+    font-style: italic;
+
+}
+h1, h2, h4 {
+    color: darkorange;
+} 
